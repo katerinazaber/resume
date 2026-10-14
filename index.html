@@ -110,8 +110,8 @@
   .logo-softline { color: #e30613; }
   .logo-softline b { color: #1d1d1b; font-weight: 900; }
   .logo-crm { color: #2f8fd8; font-size: 21px !important; }
-  .logo-lam { font-size: 15px !important; line-height: 1; color: #111; }
-  .logo-dayka { color: #f28a1a; }
+  .logo-mcr { color: #1f4e9c; letter-spacing: .06em; }
+  .logo-bit { color: #e2231a; font-size: 21px !important; }
   .job-detail { display: grid; grid-template-columns: 1fr 1fr; gap: 34px; padding: 30px; }
   .job-detail__head { display: flex; justify-content: space-between; gap: 16px; margin-bottom: 16px; }
   .job-detail__role { font-size: 22px; font-weight: 800; line-height: 1.2; margin-top: 8px; }
@@ -120,6 +120,7 @@
   .job-detail__tasks ul { list-style: none; display: grid; gap: 10px; }
   .job-detail__tasks li { display: flex; gap: 10px; font-size: 15px; }
   .job-detail__tasks li::before { content: ''; flex: none; width: 20px; height: 20px; margin-top: 1px; border-radius: 50%; background: var(--orange-soft) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M6 10.5l2.5 2.5L14 7.5' fill='none' stroke='%23f2701c' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / 20px no-repeat; }
+  .jobs-earlier { margin-top: 16px; font-size: 14px; color: var(--muted); }
   .job-detail.is-switching { animation: fade .4s ease; }
   @keyframes fade { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
 
@@ -324,25 +325,26 @@
         </button>
         <button class="card job" data-job="1">
           <div class="job__logo logo-crm">☁ CRMguru</div>
-          <div class="job__dates">Апр 2019 — Май 2024<br>5 лет 2 месяца</div>
+          <div class="job__dates">Май 2021 — Май 2024<br>3 года 1 месяц</div>
           <div class="job__role">Маркетолог</div>
-          <div class="job__company">CRM-система для бизнеса</div>
+          <div class="job__company">IT-интегратор: CRM, автоматизация, разработка ПО</div>
         </button>
         <button class="card job" data-job="2">
-          <div class="job__logo logo-lam">LOOK AT<br>MEDIA</div>
-          <div class="job__dates">Фев 2016 — Апр 2019<br>3 года 3 месяца</div>
-          <div class="job__role">Маркетолог</div>
-          <div class="job__company">Медиа и городские проекты</div>
+          <div class="job__logo logo-mcr">МЦР</div>
+          <div class="job__dates">Апр 2020 — Май 2021<br>1 год 2 месяца</div>
+          <div class="job__role">Ведущий маркетолог</div>
+          <div class="job__company">IT-решения для электроэнергетики</div>
         </button>
         <button class="card job" data-job="3">
-          <div class="job__logo logo-dayka">Дайка</div>
-          <div class="job__dates">Май 2014 — Дек 2015<br>1 год 8 месяцев</div>
-          <div class="job__role">Интернет-маркетолог</div>
-          <div class="job__company">Диджитал-агентство</div>
+          <div class="job__logo logo-bit">Первый БИТ</div>
+          <div class="job__dates">Ноя 2017 — Мар 2020<br>2 года 5 месяцев</div>
+          <div class="job__role">Ведущий специалист по маркетингу</div>
+          <div class="job__company">1С, автоматизация бизнеса, CRM</div>
         </button>
       </div>
 
       <div class="card job-detail reveal" id="jobDetail"></div>
+      <p class="jobs-earlier reveal">Ранее: A2is.ru (руководитель маркетинга и продаж), Richness Realty, РА «Апельсин», «Хейвордс Ромфорд», ГК «Фаворит», а до маркетинга — журналистика: «Невское время», «Эхо Петербурга», «Росбалт».</p>
     </div>
   </section>
 
@@ -350,7 +352,7 @@
     <div class="container">
       <div class="section-head reveal">
         <h2 class="h2">Кейсы и проекты</h2>
-        <a class="btn btn--ghost" href="#cases">Смотреть все кейсы →</a>
+        <a class="btn btn--ghost" href="https://cloud.mail.ru/public/3G31/PQNpYMbeJ" target="_blank" rel="noopener">Все материалы →</a>
       </div>
       <div class="cases">
         <article class="card case reveal">
@@ -359,7 +361,7 @@
             <div class="tags"><span class="tag">Сайт · SEO · Лидогенерация</span></div>
             <h3 class="case__title">Запуск сайта itman.ru</h3>
             <p class="case__text">Структура, контент, SEO с&nbsp;нуля. В&nbsp;2&nbsp;раза больше поискового трафика и&nbsp;заявок.</p>
-            <a class="case__link" href="#cases">Смотреть кейс →</a>
+            <a class="case__link" href="https://cloud.mail.ru/public/hxhW/11UxsWuNd" target="_blank" rel="noopener">Смотреть кейс →</a>
           </div>
         </article>
         <article class="card case reveal">
@@ -368,7 +370,7 @@
             <div class="tags"><span class="tag">Мероприятия</span></div>
             <h3 class="case__title">30+ отраслевых мероприятий</h3>
             <p class="case__text">Подготовка выступлений, стенд, демонстрация продукта. 70+ лидов крупных компаний.</p>
-            <a class="case__link" href="#cases">Смотреть кейс →</a>
+            <a class="case__link" href="https://cloud.mail.ru/public/goUo/RDZMXsYiD" target="_blank" rel="noopener">Смотреть кейс →</a>
           </div>
         </article>
         <article class="card case reveal">
@@ -377,7 +379,7 @@
             <div class="tags"><span class="tag">Онлайн-марафон</span></div>
             <h3 class="case__title">«Защитите свой бизнес от&nbsp;хаоса»</h3>
             <p class="case__text">1&nbsp;000&nbsp;000+ охвата, 175 контактов, 101 участник. Воронка через квиз и&nbsp;Telegram-бота.</p>
-            <a class="case__link" href="#cases">Смотреть кейс →</a>
+            <a class="case__link" href="https://cloud.mail.ru/public/WRnW/EEBBB4VsY" target="_blank" rel="noopener">Смотреть кейс →</a>
           </div>
         </article>
       </div>
@@ -457,9 +459,9 @@
           <span class="contact__icon" style="background:#ff6a3d"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span>
           <span><span class="contact__val">katerinazaber@mail.ru</span><br><span class="contact__hint">Email</span></span>
         </a>
-        <a class="contact" href="https://vk.com/id40614502" target="_blank" rel="noopener">
+        <a class="contact" href="https://vk.com/id40814502" target="_blank" rel="noopener">
           <span class="contact__icon" style="background:#0077ff;font-weight:900;font-size:14px">VK</span>
-          <span><span class="contact__val">vk.com/id40614502</span><br><span class="contact__hint">ВКонтакте</span></span>
+          <span><span class="contact__val">vk.com/id40814502</span><br><span class="contact__hint">ВКонтакте</span></span>
         </a>
       </div>
       <div class="contact-actions">
@@ -569,39 +571,58 @@
       logo: '<span class="logo-softline" style="font-weight:900;font-size:26px">soft<b>line</b></span>',
       dates: 'Июн 2024 — Окт 2026', duration: '2 года 5 месяцев',
       role: 'Ведущий B2B-маркетолог', company: 'Инферит ИТМен, Призма данных',
-      desc: 'Продвижение сложного B2B-продукта — российской системы инвентаризации, учёта и контроля ИТ-инфраструктуры «Инферит ИТМен» и интеллектуальной базы знаний о ПО и лицензиях «Призма данных».',
-      tags: ['Продуктовый маркетинг', 'B2B', 'Лидогенерация', 'SEO', 'Мероприятия', 'Контент'],
+      desc: 'Упаковка и продвижение сложного B2B-продукта «Инферит ИТМен» — российской системы инвентаризации, учёта и контроля ИТ-инфраструктуры. С 2026 года — ещё и «Призма данных», крупнейшая в России база знаний о ПО и лицензиях.',
+      tags: ['Продуктовый маркетинг', 'B2B', 'Лидогенерация', 'SEO', 'Мероприятия', 'PR'],
       tasks: [
-        'Сделала позиционирование и упаковку продукта: презентации, лендинги, раздатки, материалы для продаж',
-        'Исследовала рынок и ЦА, проводила кастдевы, формировала стратегии и гипотезы',
-        'Запустила сайт itman.ru, масштабировала SEO-активности',
-        'Организовывала онлайн-марафоны и отраслевые мероприятия',
-        'Считала эффективность рынков, каналов и активностей, оптимизировала бюджет'
+        'С нуля сделала позиционирование и упаковку продукта: презентации, одностраничники, материалы для продаж и партнёров',
+        'Запустила сайт itman.ru: поисковый трафик и заявки выросли в 2 раза, 10–15 бесплатных лидов в месяц при чеке от 5 млн ₽',
+        'Организовала участие в 30+ отраслевых мероприятиях: 70+ лидов крупных компаний',
+        'Запускала онлайн-марафоны и лид-магниты: квизы, чек-листы, Telegram-бот',
+        'Вывела продукт на 1 место в рейтинге «Компьютерры» и в финал «ПРОФ-IT.Инновация», организовала вступление в itSMF России',
+        'Считала эффективность каналов, конверсию воронки, стоимость лида и MQL, перераспределяла бюджет'
       ]
     },
     {
-      logo: '<span class="logo-crm" style="font-weight:900">☁ CRMguru</span>',
-      dates: 'Апр 2019 — Май 2024', duration: '5 лет 2 месяца',
-      role: 'Маркетолог', company: 'CRMguru',
-      desc: 'CRM-система для бизнеса.',
-      tags: ['B2B', 'SaaS', 'Контент'],
-      tasks: ['Ключевые задачи — добавить']
+      logo: '<span class="logo-crm" style="font-weight:900;font-size:24px">☁ CRMguru</span>',
+      dates: 'Май 2021 — Май 2024', duration: '3 года 1 месяц',
+      role: 'Маркетолог', company: 'IT-интегратор CRMguru',
+      desc: 'Продвижение российских и американских B2B-продуктов и услуг в сфере CRM, автоматизации бизнес-процессов и разработки ПО.',
+      tags: ['B2B', 'Стратегия', 'Упаковка продуктов', 'Вебинары', 'Сайты'],
+      tasks: [
+        'Разрабатывала и реализовывала маркетинговые стратегии для разных направлений бизнеса',
+        'Упаковывала новые продукты и услуги: позиционирование, презентации, рекламные материалы',
+        'Анализировала рынок и конкурентов, искала возможности для привлечения первых клиентов',
+        'Создавала сайты и лендинги, организовывала вебинары и мероприятия',
+        'Курировала SMM и контекстную рекламу, анализировала эффективность и показатели отдела продаж'
+      ]
     },
     {
-      logo: '<span class="logo-lam" style="font-weight:900;font-size:18px">LOOK AT MEDIA</span>',
-      dates: 'Фев 2016 — Апр 2019', duration: '3 года 3 месяца',
-      role: 'Маркетолог', company: 'Look At Media',
-      desc: 'Медиа и городские проекты.',
-      tags: ['Медиа', 'Спецпроекты'],
-      tasks: ['Ключевые задачи — добавить']
+      logo: '<span class="logo-mcr" style="font-weight:900;font-size:26px">МЦР</span>',
+      dates: 'Апр 2020 — Май 2021', duration: '1 год 2 месяца',
+      role: 'Ведущий маркетолог', company: 'Мастерская цифровых решений',
+      desc: 'Компания на базе «Моденс Групп», разрабатывает IT-решения для электроэнергетики. Задача маркетинга — упаковать новые продукты и привести первых клиентов.',
+      tags: ['Упаковка с нуля', 'Customer Development', 'JTBD', 'Брендинг'],
+      tasks: [
+        'Упаковала два продукта с нуля: слоганы, стратегия, 10+ презентаций под разные сегменты',
+        'Провела исследования ЦА по Customer Development и Jobs to be Done',
+        'Создала сайт компании с конверсией 1,5%',
+        'Выстроила продвижение через личный бренд руководителя, конференции и выставки',
+        'Наладила взаимодействие со Сколково и Технополисом «Москва»'
+      ]
     },
     {
-      logo: '<span class="logo-dayka" style="font-weight:900;font-size:26px">Дайка</span>',
-      dates: 'Май 2014 — Дек 2015', duration: '1 год 8 месяцев',
-      role: 'Интернет-маркетолог', company: 'Дайка',
-      desc: 'Диджитал-агентство.',
-      tags: ['Интернет-реклама', 'SMM'],
-      tasks: ['Ключевые задачи — добавить']
+      logo: '<span class="logo-bit" style="font-weight:900;font-size:24px">Первый БИТ</span>',
+      dates: 'Ноя 2017 — Мар 2020', duration: '2 года 5 месяцев',
+      role: 'Ведущий специалист по маркетингу', company: 'Первый БИТ',
+      desc: 'Лидогенерация для B2B-направлений: 1С, автоматизация розницы и аптек, корпоративные сети, отраслевые решения для банков, CRM (1С-Битрикс, AmoCRM).',
+      tags: ['Лидогенерация', 'Email-маркетинг', 'Вебинары', 'Аналитика', 'JTBD'],
+      tasks: [
+        'Рост лидов на 30% в летние месяцы',
+        'Провела исследование по Jobs to be Done — помогло лучше понять ЦА и улучшить сервис',
+        'Запустила рассылку лонгридов вместо обычных писем — удачная гипотеза',
+        'Организовывала вебинары и семинары под ключ, вела контент и сайты компании',
+        'Планировала активности, считала конверсию и ROI, контролировала планы по лидам филиалов'
+      ]
     }
   ];
 
