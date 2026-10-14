@@ -66,10 +66,8 @@
 
   /* Первый экран */
   .hero { position: relative; height: 100vh; min-height: 640px; overflow: hidden; background: #6b2a0c; color: #fff; }
-  .hero__media { position: absolute; inset: 0; }
-  .hero__video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 70% center; }
-  .hero__video--happy { opacity: 0; transition: opacity .35s; }
-  .hero.is-happy .hero__video--happy { opacity: 1; }
+  .hero__media { position: absolute; inset: 0 0 0 36%; -webkit-mask-image: linear-gradient(90deg, transparent, #000 16%); mask-image: linear-gradient(90deg, transparent, #000 16%); }
+  .hero__video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 58% center; }
   .hero__shade { position: absolute; inset: 0; z-index: 1; background: linear-gradient(90deg, rgba(60,20,4,.86) 0%, rgba(100,36,8,.55) 38%, rgba(100,36,8,0) 62%); }
   .hero__text { position: relative; z-index: 2; max-width: 620px; padding-top: 24vh; }
   .hero h1 { font-size: clamp(44px, 6vw, 80px); font-weight: 600; line-height: .96; letter-spacing: -.025em; }
@@ -206,8 +204,8 @@
     .contacts__box { padding: 28px 20px; }
     .header .btn span { display: none; }
     .hero { background: linear-gradient(180deg, #4a1806, #8a3510); }
-    .hero__media { top: 52%; }
-    .hero__video { object-position: 78% 40%; }
+    .hero__media { top: 52%; left: 0; -webkit-mask-image: none; mask-image: none; }
+    .hero__video { object-position: 60% 40%; }
     .hero__sub { margin: 14px 0 22px; }
     .hero__shade { top: 52%; height: 70px; background: linear-gradient(180deg, #7a2e0e, rgba(122,46,14,0)); }
     .hero__text { padding-top: 104px; }
@@ -261,8 +259,7 @@
 
 <section class="hero" id="top">
   <div class="hero__media">
-    <video class="hero__video hero__video--idle" data-name="idle" autoplay muted loop playsinline poster="assets/poster.jpg"></video>
-    <video class="hero__video hero__video--happy" data-name="happy" muted loop playsinline preload="auto"></video>
+    <video class="hero__video" data-name="idle" autoplay muted loop playsinline poster="assets/poster.jpg"></video>
   </div>
   <div class="hero__shade"></div>
 
@@ -555,13 +552,10 @@
   onScroll();
 
   const hero = document.querySelector('.hero');
-  const idle = hero.querySelector('.hero__video--idle');
-  const happy = hero.querySelector('.hero__video--happy');
+  const video = hero.querySelector('.hero__video');
   if (!reduced) {
-    hero.querySelectorAll('video[data-name]').forEach(v => {
-      v.src = `assets/${v.dataset.name}${small ? '-720' : ''}.mp4`;
-    });
-    idle.play().catch(() => {});
+    video.src = `assets/${video.dataset.name}${small ? '-720' : ''}.mp4`;
+    video.play().catch(() => {});
   }
 
   if (window.gsap && !reduced) {
@@ -570,10 +564,7 @@
   }
 
   const zone = hero.querySelector('.kodi-zone');
-  const setHappy = on => {
-    if (on && happy.src) { happy.currentTime = 0; happy.play().catch(() => {}); }
-    hero.classList.toggle('is-happy', on);
-  };
+  const setHappy = on => hero.classList.toggle('is-happy', on);
   zone.addEventListener('mouseenter', () => setHappy(true));
   zone.addEventListener('mouseleave', () => setHappy(false));
   zone.addEventListener('click', () => setHappy(!hero.classList.contains('is-happy')));
